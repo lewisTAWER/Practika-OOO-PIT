@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Возможно ли создать функции A и B, чтобы new A() == new B()?
+			let obj = {}
+
+			function A() {
+				return obj
+			}
+			function B() {
+				return obj
+			}
+
+			alert(new A() == new B())
+
+			// 2-я задача Создайте калькулятор при помощи конструктора, new Calculator
+			function Calculator() {
+				this.read = function () {
+					this.a = +prompt('Введите a?')
+					this.b = +prompt('Введите b?')
+				}
+
+				this.sum = function () {
+					return this.a + this.b
+				}
+
+				this.mul = function () {
+					return this.a * this.b
+				}
+			}
+
+			let calculatorTwo = new Calculator()
+			calculatorTwo.read()
+
+			alert('Sum=' + calculatorTwo.sum())
+			alert('Mul=' + calculatorTwo.mul())
+
+			// 3-я задача Создайте new Accumulator
+			function Accumulator(startingValue) {
+				this.value = startingValue
+
+				this.read = function () {
+					this.value += +prompt('Сколько нужно добавить?')
+				}
+			}
+
+			let accumulator = new Accumulator(1)
+			accumulator.read()
+			accumulator.read()
+			alert(accumulator.value)
+		</script>
+	</body>
+</html>
