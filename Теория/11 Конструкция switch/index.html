@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Напишите "if", аналогичный "switch"
+			let browser = prompt('Введите браузер')
+
+			if (browser == 'Edge') {
+				console.log("You've got the Edge!")
+			} else if (
+				browser == 'Chrome' ||
+				browser == 'FireFox' ||
+				browser == 'Safari' ||
+				browser == 'Opera'
+			) {
+				console.log('Okay we support these browsers too')
+			} else {
+				console.log('We hope that this page looks ok!')
+			}
+
+			// 2-я задача Переписать условия "if" на "switch"
+			let number = +prompt('Введите между 0 и 3')
+			switch (number) {
+				case 0:
+					console.log('Вы ввели 0')
+					break
+
+				case 1:
+					console.log('Вы ввели 1')
+					break
+
+				case 2:
+				case 3:
+					console.log('Вы ввели 2 или 3')
+					break
+
+				default:
+					console.log('Вы ввели не то!')
+			}
+		</script>
+	</body>
+</html>
