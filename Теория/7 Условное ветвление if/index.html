@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я Выведется ли alert?
+			if ('0') {
+				alert('Hi') // выведестя, тк 0 в виде строки
+			}
+
+			// 2-я Название JavaScript
+			let nameOfCompany = prompt('Какое официальное название JS?', '')
+			if (nameOfCompany == 'ECMAScript') {
+				alert('Верно!')
+			} else {
+				alert("Не знаете? - 'ECMAScript'")
+			}
+
+			// 3-я Покажите знак числа
+			let number = prompt('Введите число/цифру:', '')
+			if (number > 1) {
+				alert('1')
+			} else if (number < 0) {
+				alert('-1')
+			} else {
+				alert('0')
+			}
+
+			// 5-я Перепишите 'if..else' в '?'
+			let login = prompt('Какова ваша должность?', '')
+			let message =
+				login == 'Сотрудник'
+					? 'Привет'
+					: login == 'Директор'
+					? 'Здравствуйте'
+					: login == ''
+					? 'Нет логина'
+					: ''
+			alert(message)
+
+			// 4-я Перепишите 'if' в '?'
+			result = a + b < 4 ? alert('Мало') : alert('Много')
+		</script>
+	</body>
+</html>
