@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Каким будет результат при обращении к свойству объекта ref?
+			function makeUser() {
+				return {
+					name: 'John',
+					ref: this,
+				}
+			}
+
+			let user = makeUser()
+
+			alert(user.ref.name) // выведет ошибку, т.к. this равен undefined */
+
+			// 2-я задача калькулятор
+			let calculator = {
+				sum() {
+					return this.a + this.b
+				},
+
+				mul() {
+					return this.a * this.b
+				},
+
+				read() {
+					this.a = +prompt('Введите a')
+					this.b = +prompt('Введите b')
+				},
+			}
+
+			calculator.read()
+			alert(calculator.sum())
+			alert(calculator.mul())
+
+			// 3-я задача Цепь вызовов
+			let ladder = {
+				step: 0,
+				up() {
+					this.step++
+					return this
+				},
+				down() {
+					this.step--
+					return this
+				},
+				showStep() {
+					alert(this.step)
+					return this
+				},
+			}
+
+			ladder.up().up().down().showStep().down().showStep()
+		</script>
+	</body>
+</html>
