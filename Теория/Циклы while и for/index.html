@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Какое последнее значение выведет этот код?
+
+			let i = 3
+			while (i) {
+				alert(i--)
+			} // выведет 1
+
+			// 2-я задача Какие значения выведет цикл while?
+			let i = 0
+			while (++i < 5) alert(i) // выведет 1, 2, 3, 4
+
+			let i = 0
+			while (i++ < 5) alert(i) в// ыведет 1, 2, 3, 4, 5
+
+			// 3-я задача Какие значения выведет цикл for?
+			for (let i = 0; i < 5; i++) alert( i ); // выведет 0, 1, 2, 3, 4
+			for (let i = 0; i < 5; ++i) alert( i );  // выведет 0, 1, 2, 3, 4,
+
+			// 4-я задача При помощи цикла for выведите чётные числа от 2 до 10.
+			for (let i = 2; i < 10; ++i) {
+				if (i % 2 == 0) {
+					console.log(i)
+				}
+			}
+
+			// 5-я задача замените for на while
+			let g = 0
+			while (g < 3) {
+				console.log(`number ${g}!`)
+				g++
+			}
+
+			// 6-я задача Напишите цикл, который предлагает prompt ввести число, большее 100.
+			let j
+			do {
+				j = prompt('Введите больше 100', '')
+			} while (j <= 100)
+			console.log('nice')
+
+			// 7-я задача Вывести простые числа от 2 до n
+			let n = 10
+			next: for (let i = 2; i <= n; i++) {
+				for (let j = 2; j < i; j++) {
+					if (i % j == 0) continue next
+				}
+				console.log(i)
+			}
+		</script>
+	</body>
+</html>
