@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Напишите код, выполнив задание из каждого пункта отдельной строкой:
+			// Создайте пустой объект user.
+			let user = {}
+			// Добавьте свойство name со значением John.
+			let user.name = "John"
+			// Добавьте свойство surname со значением Smith.
+			let user.surname = "Smith"
+			// Измените значение свойства name на Pete.
+			let user.name = "Pete"
+			// Удалите свойство name из объекта.
+			delete user.name
+
+			// 2-я задача Проверка на пустоту
+			function isEmpty(schedule) {
+				for (let key in schedule) {
+					return false
+				}
+				return true
+			}
+
+			// 3-я задача Можно ли изменить объект, объявленный с помощью const?
+			const user = {
+				name: 'John',
+			}
+
+			// это будет работать?
+			user.name = 'Pete' Да можем
+
+			// 4-я задача Сумма свойств объекта
+			let salaries = {
+				John: 100,
+				Ann: 160,
+				Pete: 130,
+			}
+			let sum = 0
+			for (let key in salaries) {
+				sum += salaries[key]
+			}
+
+			alert(sum)
+
+			// 5-я задача Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+			function multiplyNumeric(obj) {
+				for (let key in obj) {
+					if (typeof obj[key] == 'number') {
+						obj[key] *= 2
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
