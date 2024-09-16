@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Сделать первый символ заглавным
+			function ucFisrt(str) {
+				if (!str) return str
+
+				return str[0].toUpperCase() + str.slice(1)
+			}
+			alert(ucFisrt('вася'))
+
+			// 2-я задача Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
+			function checkSpam(str) {
+				let str2 = str.toLowerCase()
+
+				return str2.includes('viagra') || str2.includes('xxx')
+			}
+
+			alert(checkSpam('buy ViAgRA now'))
+			alert(checkSpam('free xxxxx'))
+			alert(checkSpam('innocent rabbit'))
+
+			/* 3-я задача Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и,
+			     если она превосходит maxlength, заменяет конец str на "…", так, чтобы её длина стала равна maxlength.*/
+			function truncate(str, maxlength) {
+				return str.length > maxlength ? str.slice(0, maxlength - 1) + '…' : str
+			}
+			alert(truncate('hi everyone', 9))
+
+			// 4-я задача Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+			function extractCurrencyValue(str) {
+				return +str.slice(1)
+			}
+			alert(extractCurrencyValue('$49'))
+		</script>
+	</body>
+</html>
