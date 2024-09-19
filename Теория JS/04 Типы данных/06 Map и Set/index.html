@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Создайте функцию unique(arr), которая вернёт массив уникальных, не повторяющихся значений массива arr.
+			function unique(arr) {
+				let set = new Set(arr)
+				for (let value of set) alert(value)
+			}
+			/*
+      function unique(arr) {
+				return Array.from(new Set(arr))
+			}
+      */
+
+			let values = [
+				'Hare',
+				'Krishna',
+				'Hare',
+				'Krishna',
+				'Krishna',
+				'Krishna',
+				'Hare',
+				'Hare',
+				':-O',
+			]
+
+			unique(values)
+
+			// 2-я задача Напишите функцию aclean(arr), которая возвращает массив слов, очищенный от анаграмм.
+			let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares']
+
+			function aclean(arr) {
+				let map = new Map()
+
+				for (let words of arr) {
+					let sort = words.toLowerCase().split('').sort().join('')
+					map.set(sort, words)
+				}
+				return Array.from(map.values())
+			}
+
+			alert(aclean(arr))
+		</script>
+	</body>
+</html>
