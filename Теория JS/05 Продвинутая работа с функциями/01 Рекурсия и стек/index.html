@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Напишите функцию sumTo(n), которая вычисляет сумму чисел 1 + 2 + ... + n.
+			// 1-й вариант
+			function sumTo(n) {
+				let sum = 0
+				for (let i = 1; i <= n; i++) {
+					sum += i
+				}
+				return sum
+			}
+
+			alert(sumTo(100))
+			// 2-й вариант
+			function sumTo(n) {
+				if (n == 1) return 1
+				return n + sumTo(n - 1)
+			}
+
+			alert(sumTo(100))
+
+			// 3-й вариант
+			function sumTo(n) {
+				return (n * (n + 1)) / 2
+			}
+
+			alert(sumTo(100))
+
+			// 2-я задача Вычислить факториал
+			function factorial(n) {
+				return n ? n * factorial(n - 1) : 1
+			}
+
+			alert(factorial(5))
+			// 3-я задача
+			function fib(n) {
+				return n <= 1 ? n : fib(n - 1) + fib(n - 2)
+			}
+
+			alert(fib(3)) // 2
+			alert(fib(7)) // 13
+
+			// 4-я задача
+			function printList(list) {
+				while (list) {
+					alert(list.value)
+					list = list.next
+				}
+			}
+			// 5-я задача Вывод односвязного списка в обратном порядке
+			function printReverseList(list) {
+				let arr = []
+				let tmp = list
+
+				while (tmp) {
+					arr.push(tmp.value)
+					tmp = tmp.next
+				}
+
+				for (let i = arr.length - 1; i >= 0; i--) {
+					alert(arr[i])
+				}
+			}
+		</script>
+	</body>
+</html>
