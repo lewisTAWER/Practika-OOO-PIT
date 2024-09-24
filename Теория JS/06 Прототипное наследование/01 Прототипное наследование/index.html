@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Какие значения показываются в процессе выполнения кода?
+			let animal = {
+				jumps: null,
+			}
+
+			let rabbit = {
+				__proto__: animal,
+				jumps: true,
+			}
+
+			alert(rabbit.jumps) // true (rabbit)
+
+			delete rabbit.jumps
+
+			alert(rabbit.jumps) // null (animal)
+
+			delete animal.jumps
+
+			alert(rabbit.jumps) // undefined(-)
+			// 2-я задача
+			// 3-я задача
+			// 4-я задача
+		</script>
+	</body>
+</html>
