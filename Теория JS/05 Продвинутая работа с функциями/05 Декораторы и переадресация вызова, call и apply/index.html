@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			// 1-я задача Создайте декоратор spy(func), который должен возвращать обёртку, которая сохраняет все вызовы функции в своём свойстве calls.
+			function spy(func) {
+				function wrapper(...args) {
+					wrapper.calls.push(args)
+					return func.apply(this, args)
+				}
+
+				wrapper.calls = []
+
+				return wrapper
+			}
+
+			// 2-я задача Создайте декоратор delay(f, ms), который задерживает каждый вызов f на ms миллисекунд.
+			function delay(f, ms) {
+				return function () {
+					setTimeout(() => f.apply(this, arguments), ms)
+				}
+			}
+
+			let f1000 = delay(alert, 1000)
+
+			f1000('test')
+		</script>
+	</body>
+</html>
