@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+
+			td,
+			th {
+				border: 1px solid black;
+				padding: 3px;
+				text-align: center;
+			}
+
+			th {
+				font-weight: bold;
+				background-color: #e6e6e6;
+			}
+		</style>
+	</head>
+	<body>
+		<ol id="elem">
+			<li>Привет</li>
+			<li>Мир</li>
+		</ol>
+
+		<!--  -->
+
+		<h2>Список задач:</h2>
+		<ol id="ol" type="1"></ol>
+
+		<!--  -->
+
+		<div id="container"></div>
+
+		<!--  -->
+
+		<ul>
+			<li>
+				Животные
+				<ul>
+					<li>
+						Млекопитающие
+						<ul>
+							<li>Коровы</li>
+							<li>Ослы</li>
+							<li>Собаки</li>
+							<li>Тигры</li>
+						</ul>
+					</li>
+					<li>
+						Другие
+						<ul>
+							<li>Змеи</li>
+							<li>Птицы</li>
+							<li>Ящерицы</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Рыбы
+				<ul>
+					<li>
+						Аквариумные
+						<ul>
+							<li>Гуппи</li>
+							<li>Скалярии</li>
+						</ul>
+					</li>
+					<li>
+						Морские
+						<ul>
+							<li>Морская форель</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<!--  -->
+
+		<div id="calendar"></div>
+
+		<!--  -->
+
+		<div id="clock">
+			<span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec"
+				>ss</span
+			>
+		</div>
+
+		<input type="button" onclick="clockStart()" value="Start" />
+		<input type="button" onclick="clockStop()" value="Stop" />
+	</body>
+</html>
