@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> </head>
+	<body>
+		<select id="genres">
+			<option value="rock">Рок</option>
+			<option value="blues" selected>Блюз</option>
+		</select>
+
+		<script>
+			// 1-я задача Добавьте пункт к выпадающему списку
+			// 1)
+			let selectedOption = genres.options[genres.selectedIndex]
+			alert(selectedOption.value)
+			alert(selectedOption.text)
+
+			// 2)
+			let newOption = new Option('Классика', 'classic')
+			genres.append(newOption)
+
+			// 3)
+			newOption.selected = true
+		</script>
+	</body>
+</html>
