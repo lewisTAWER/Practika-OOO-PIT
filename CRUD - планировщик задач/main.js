@@ -8,7 +8,7 @@ function saveNotes(notes) {
 
 function displayNotes() {
 	const notesList = document.getElementById('notes-list')
-	notesList.innerHTML = ''
+	notesList.innerHTML = '' 
 
 	const notes = getNotes()
 
